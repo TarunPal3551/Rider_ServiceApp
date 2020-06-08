@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/gradient"
+                app:title="Profile"
+                app:titleTextColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_exit_to_app_black_24dp" />
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Log Out"
+                android:textSize="16sp"
+                android:layout_toLeftOf="@id/logout"
+                android:visibility="visible"
+                android:layout_toStartOf="@id/logout"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            android:background="#F2F3EF"
+            android:paddingTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:text="Tarun Pal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--<RatingBar-->
+            <!--android:id="@+id/ratingBar"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/username"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:isIndicator="true"-->
+            <!--android:rating="4.0"-->
+            <!--android:scaleX="0.5"-->
+            <!--android:scaleY="0.5"-->
+            <!--android:stepSize="0.1"-->
+            <!--android:layout_marginTop="-13dp"-->
+            <!--android:theme="@style/RatingBarStyle"-->
+            <!--/>-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/darkSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/header"
+            android:background="#C6CACA" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/darkSeparator">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="55dp">
+
+                <TextView
+                    android:id="@+id/myAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Contact Info"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/myAccount"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#B8B9B7" />
+                <!--<ImageView-->
+                <!--android:id="@+id/minOrderImage"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_below="@id/myAccount"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:layout_marginTop="17dp"-->
+                <!--android:src="@drawable/icons8_watch"/>-->
+                <!--<TextView-->
+                <!--android:id="@+id/minOrderText"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Min Order Quantity"-->
+                <!--android:layout_below="@id/myAccount"-->
+                <!--android:layout_toRightOf="@id/minOrderImage"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:textSize="16sp"/>-->
+                <!--<TextView-->
+                <!--android:id="@+id/minOrder"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="100 L"-->
+                <!--android:layout_below="@id/myAccount"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@android:color/black"/>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/maxOrderImage"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_below="@id/minOrderText"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:layout_marginTop="17dp"-->
+                <!--android:src="@drawable/icons8_planner"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/maxOrderText"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Max Order Quantity"-->
+                <!--android:layout_below="@id/minOrderText"-->
+                <!--android:layout_toRightOf="@id/maxOrderImage"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:textSize="16sp"/>-->
+                <!--<TextView-->
+                <!--android:id="@+id/maxOrder"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="500 L"-->
+                <!--android:layout_below="@id/minOrder"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@android:color/black"/>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/deliveryTimeImage"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_below="@id/maxOrderText"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:layout_marginTop="17dp"-->
+                <!--android:src="@drawable/icons8_expensive"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/deliveryTimeText"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Deliver Time"-->
+                <!--android:layout_below="@id/maxOrder"-->
+                <!--android:layout_toRightOf="@id/deliveryTimeImage"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:textSize="16sp"/>-->
+                <!--<TextView-->
+                <!--android:id="@+id/deliveryTime"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="2 Days"-->
+                <!--android:layout_below="@id/maxOrder"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@android:color/black"/>-->
+
+
+                <ImageView
+                    android:id="@+id/emailImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/myAccount"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/icons8_secured_letter" />
+
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/myAccount"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/emailImage"
+                    android:text="Email"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/myAccount"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="tarunplay3551@gmail.com"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/contactImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/emailText"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/icons8_phone" />
+
+                <TextView
+                    android:id="@+id/contactText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/contactImage"
+                    android:text="Contact No."
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="+91-7417391228"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/darkSeparator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@id/contact"
+                    android:layout_marginTop="16dp"
+                    android:background="#C6CACA" />
+
+                <TextView
+                    android:id="@+id/quickText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/darkSeparator2"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Quick Links"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/separator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/quickText"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#B8B9B7" />
+
+
+                <ImageView
+                    android:id="@+id/rateImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/separator2"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/icons8_popular" />
+
+                <TextView
+                    android:id="@+id/rateAndReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/separator2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@id/rateImage"
+                    android:text="Rate &amp; Review"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/shareImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/rateAndReview"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/icons8_share" />
+
+                <TextView
+                    android:id="@+id/shareApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rateAndReview"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@id/shareImage"
+                    android:text="Share App"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/termsImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/shareApp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/ic_termofservice"
+                    android:tint="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/termsApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shareApp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@id/termsImage"
+                    android:text="Terms and Condition"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/privacyImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/termsApp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/ic_privacypolicy"
+                    android:tint="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/privacyApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/termsApp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_toRightOf="@id/privacyImage"
+                    android:text="Privacy Policy"
+                    android:textSize="16sp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/version"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/logout"-->
+                <!--android:background="#F2F3EF"-->
+                <!--android:paddingTop="16dp"-->
+                <!--android:text="v1.0.0"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:paddingBottom="50dp"/>-->
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
